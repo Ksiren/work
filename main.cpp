@@ -3,7 +3,21 @@
 #include <vector>
 #include <map>
 using namespace std;
-
+void change_questions()
+{
+    ofstream fout("Questionz.txt");
+    cout<<"Enter questions which you want to answer in the future (to end your list enter 0):\n";
+    string s;
+    for(cin>>s;s!="0";cin>>s)
+    {
+        fout<<s<<" ";
+    }
+    fout<<"STOP";
+    fout.close();
+    ofstream aout("Output.txt");
+    s="";
+    aout<<s;
+}
 void result(int total)
 {
     string a1,a2,a3;
